@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 import time
 
-# Load environment variables
+# Loading environment variables
 load_dotenv()
 
 # Check if LANGCHAIN_API_KEY is set
@@ -17,7 +17,7 @@ else:
     os.environ["LANGCHAIN_TRACING_V2"] = "true"
     os.environ["LANGCHAIN_API_KEY"] = api_key
 
-    # Define greeting phrases
+    # Defining the greeting phrases
     greetings = ["hello", "hi", "hey", "namaste", "greetings", "good morning", "good afternoon", "good evening"]
 
     # Prompt Template
@@ -47,9 +47,9 @@ else:
     output_parser = StrOutputParser()
     chain = prompt | llm | output_parser
 
-    # Display response
+    # Displaying final response
     if input_text:
-        # Check if the input is a greeting
+        # Checking if the input is a greeting
         if any(greet in input_text.lower() for greet in greetings):
             with st.spinner("Processing"):
                 time.sleep(2)
