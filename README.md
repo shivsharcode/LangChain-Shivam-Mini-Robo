@@ -2,4 +2,4 @@
 <hr>
 
 <h3>Preview</h3>
-![Rec](assets/screenrec.gif)
+![screenrec](assets/screenrec.gif)
